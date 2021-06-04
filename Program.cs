@@ -41,10 +41,8 @@ namespace ITProject
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    var port = Environment.GetEnvironmentVariable("PORT");
-
-                    webBuilder.UseStartup<Startup>()
-                    .UseUrls("https://*:" + port);
+                    webBuilder.UseUrls("http://0.0.0.0:" + Environment.GetEnvironmentVariable("PORT"));
+                    webBuilder.UseStartup<Startup>();
                 });
     }
 }
