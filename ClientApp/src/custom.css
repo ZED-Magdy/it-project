@@ -1,0 +1,6 @@
+/* Provide sufficient contrast against white background */
+@media screen and (max-width: 996px){
+  .search-btn {
+    margin-left: 0px !important;
+  }
+}
